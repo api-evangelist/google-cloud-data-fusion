@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/google-cloud-data-fusion/refs/heads/main/json-schema/google-cloud-data-fusion-instance-schema.json",
+  "title": "Google Cloud Data Fusion Instance",
+  "description": "Represents a Data Fusion instance, which is a managed environment for building and running data integration pipelines.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Output only. The name of this instance in the format projects/{project}/locations/{location}/instances/{instance}."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of this instance."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["BASIC", "ENTERPRISE", "DEVELOPER"],
+      "description": "The type of the Data Fusion instance."
+    },
+    "enableStackdriverLogging": {
+      "type": "boolean",
+      "description": "Option to enable Stackdriver Logging."
+    },
+    "enableStackdriverMonitoring": {
+      "type": "boolean",
+      "description": "Option to enable Stackdriver Monitoring."
+    },
+    "privateInstance": {
+      "type": "boolean",
+      "description": "Specifies whether the Data Fusion instance should be private."
+    },
+    "networkConfig": {
+      "type": "object",
+      "description": "Network configuration options for a private instance.",
+      "properties": {
+        "network": {
+          "type": "string",
+          "description": "Name of the network in the customer project."
+        },
+        "ipAllocation": {
+          "type": "string",
+          "description": "The IP range in CIDR notation to use for the managed Data Fusion instance nodes."
+        }
+      }
+    },
+    "labels": {
+      "type": "object",
+      "description": "The resource labels for instance to use to annotate any related underlying resources.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "options": {
+      "type": "object",
+      "description": "Map of additional options used to configure the behavior of Data Fusion instance.",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "createTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Output only. The time the instance was created."
+    },
+    "updateTime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Output only. The time the instance was last updated."
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "STATE_UNSPECIFIED",
+        "CREATING",
+        "ACTIVE",
+        "FAILED",
+        "DELETING",
+        "UPGRADING",
+        "RESTARTING",
+        "UPDATING",
+        "AUTO_UPDATING",
+        "AUTO_UPGRADING",
+        "DISABLED"
+      ],
+      "description": "Output only. The current state of this Data Fusion instance."
+    },
+    "serviceEndpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "Output only. Endpoint on which the Data Fusion UI is accessible."
+    },
+    "zone": {
+      "type": "string",
+      "description": "Name of the zone in which the Data Fusion instance will be created."
+    },
+    "version": {
+      "type": "string",
+      "description": "Current version of Data Fusion."
+    },
+    "displayName": {
+      "type": "string",
+      "description": "Display name for an instance."
+    },
+    "apiEndpoint": {
+      "type": "string",
+      "format": "uri",
+      "description": "Output only. Endpoint on which the REST APIs is accessible."
+    }
+  },
+  "required": ["type"]
+}

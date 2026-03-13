@@ -1,0 +1,27 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "gcloud": "https://cloud.google.com/data-fusion/docs/reference/rest/v1/projects.locations.instances#",
+    "Instance": "gcloud:Instance",
+    "name": "schema:name",
+    "description": "schema:description",
+    "displayName": "schema:alternateName",
+    "type": "schema:additionalType",
+    "state": "schema:status",
+    "version": "schema:softwareVersion",
+    "createTime": "schema:dateCreated",
+    "updateTime": "schema:dateModified",
+    "serviceEndpoint": "schema:url",
+    "apiEndpoint": "schema:EntryPoint",
+    "zone": "schema:locationCreated",
+    "labels": "schema:keywords",
+    "privateInstance": "schema:isAccessibleForFree",
+    "networkConfig": {
+      "@id": "schema:NetworkConfiguration",
+      "@context": {
+        "network": "schema:name",
+        "ipAllocation": "schema:identifier"
+      }
+    }
+  }
+}
