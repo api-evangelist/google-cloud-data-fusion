@@ -23,10 +23,10 @@ security:
 tags:
   - name: Instances
     description: Operations for managing Data Fusion instances
-  - name: Operations
-    description: Long-running operation management
   - name: Locations
     description: Available locations for Data Fusion
+  - name: Operations
+    description: Long-running operation management
 paths:
   /projects/{projectId}/locations:
     get:
