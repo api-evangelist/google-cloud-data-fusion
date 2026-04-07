@@ -16,42 +16,42 @@ externalDocs:
   description: Google Cloud Data Fusion Documentation
   url: https://cloud.google.com/data-fusion/docs/reference/rest
 servers:
-- url: https://datafusion.googleapis.com/v1
-  description: Google Cloud Data Fusion API v1
+  - url: https://datafusion.googleapis.com/v1
+    description: Google Cloud Data Fusion API v1
 security:
-- oauth2: []
+  - oauth2: []
 tags:
-- name: Instances
-  description: Operations for managing Data Fusion instances
-- name: Operations
-  description: Long-running operation management
-- name: Locations
-  description: Available locations for Data Fusion
+  - name: Instances
+    description: Operations for managing Data Fusion instances
+  - name: Operations
+    description: Long-running operation management
+  - name: Locations
+    description: Available locations for Data Fusion
 paths:
   /projects/{projectId}/locations:
     get:
       operationId: listLocations
-      summary: List available locations
+      summary: Google Cloud Data Fusion List available locations
       description: Lists available locations for the given project.
       tags:
-      - Locations
+        - Locations
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-        description: The project ID.
-      - name: pageSize
-        in: query
-        schema:
-          type: integer
-        description: Maximum number of results to return.
-      - name: pageToken
-        in: query
-        schema:
-          type: string
-        description: Page token for pagination.
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The project ID.
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+          description: Maximum number of results to return.
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+          description: Page token for pagination.
       responses:
         '200':
           description: Successful response
@@ -62,33 +62,33 @@ paths:
   /projects/{projectId}/locations/{location}/instances:
     get:
       operationId: listInstances
-      summary: List Data Fusion instances
+      summary: Google Cloud Data Fusion List Data Fusion instances
       description: Lists Data Fusion instances in the specified project and location.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-        description: The project ID.
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-        description: The location (region).
-      - name: pageSize
-        in: query
-        schema:
-          type: integer
-        description: Maximum number of instances to return.
-      - name: pageToken
-        in: query
-        schema:
-          type: string
-        description: Page token for pagination.
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The project ID.
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The location (region).
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+          description: Maximum number of instances to return.
+        - name: pageToken
+          in: query
+          schema:
+            type: string
+          description: Page token for pagination.
       responses:
         '200':
           description: Successful response
@@ -98,27 +98,27 @@ paths:
                 $ref: '#/components/schemas/ListInstancesResponse'
     post:
       operationId: createInstance
-      summary: Create a Data Fusion instance
+      summary: Google Cloud Data Fusion Create a Data Fusion instance
       description: Creates a new Data Fusion instance in the specified project and location.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: instanceId
-        in: query
-        required: true
-        schema:
-          type: string
-        description: The name of the instance to create.
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: instanceId
+          in: query
+          required: true
+          schema:
+            type: string
+          description: The name of the instance to create.
       requestBody:
         required: true
         content:
@@ -135,26 +135,26 @@ paths:
   /projects/{projectId}/locations/{location}/instances/{instanceId}:
     get:
       operationId: getInstance
-      summary: Get a Data Fusion instance
+      summary: Google Cloud Data Fusion Get a Data Fusion instance
       description: Gets details of a single Data Fusion instance.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: instanceId
-        in: path
-        required: true
-        schema:
-          type: string
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: instanceId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response
@@ -164,31 +164,31 @@ paths:
                 $ref: '#/components/schemas/Instance'
     patch:
       operationId: updateInstance
-      summary: Update a Data Fusion instance
+      summary: Google Cloud Data Fusion Update a Data Fusion instance
       description: Updates a single Data Fusion instance.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: instanceId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: updateMask
-        in: query
-        schema:
-          type: string
-        description: Field mask for update.
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: instanceId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: updateMask
+          in: query
+          schema:
+            type: string
+          description: Field mask for update.
       requestBody:
         required: true
         content:
@@ -204,26 +204,26 @@ paths:
                 $ref: '#/components/schemas/Operation'
     delete:
       operationId: deleteInstance
-      summary: Delete a Data Fusion instance
+      summary: Google Cloud Data Fusion Delete a Data Fusion instance
       description: Deletes a single Data Fusion instance.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: instanceId
-        in: path
-        required: true
-        schema:
-          type: string
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: instanceId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response with long-running operation
@@ -234,26 +234,26 @@ paths:
   /projects/{projectId}/locations/{location}/instances/{instanceId}:restart:
     post:
       operationId: restartInstance
-      summary: Restart a Data Fusion instance
+      summary: Google Cloud Data Fusion Restart a Data Fusion instance
       description: Restarts a single Data Fusion instance.
       tags:
-      - Instances
+        - Instances
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: instanceId
-        in: path
-        required: true
-        schema:
-          type: string
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: instanceId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response with long-running operation
@@ -264,29 +264,29 @@ paths:
   /projects/{projectId}/locations/{location}/operations:
     get:
       operationId: listOperations
-      summary: List operations
+      summary: Google Cloud Data Fusion List operations
       description: Lists operations for the specified project and location.
       tags:
-      - Operations
+        - Operations
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: pageSize
-        in: query
-        schema:
-          type: integer
-      - name: pageToken
-        in: query
-        schema:
-          type: string
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pageSize
+          in: query
+          schema:
+            type: integer
+        - name: pageToken
+          in: query
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response
@@ -297,26 +297,26 @@ paths:
   /projects/{projectId}/locations/{location}/operations/{operationId}:
     get:
       operationId: getOperation
-      summary: Get an operation
+      summary: Google Cloud Data Fusion Get an operation
       description: Gets the latest state of a long-running operation.
       tags:
-      - Operations
+        - Operations
       parameters:
-      - name: projectId
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: location
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: operationId
-        in: path
-        required: true
-        schema:
-          type: string
+        - name: projectId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: location
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: operationId
+          in: path
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: Successful response
@@ -347,9 +347,9 @@ components:
         type:
           type: string
           enum:
-          - BASIC
-          - ENTERPRISE
-          - DEVELOPER
+            - BASIC
+            - ENTERPRISE
+            - DEVELOPER
           description: Instance type.
         enableStackdriverLogging:
           type: boolean
@@ -386,17 +386,17 @@ components:
         state:
           type: string
           enum:
-          - STATE_UNSPECIFIED
-          - CREATING
-          - ACTIVE
-          - FAILED
-          - DELETING
-          - UPGRADING
-          - RESTARTING
-          - UPDATING
-          - AUTO_UPDATING
-          - AUTO_UPGRADING
-          - DISABLED
+            - STATE_UNSPECIFIED
+            - CREATING
+            - ACTIVE
+            - FAILED
+            - DELETING
+            - UPGRADING
+            - RESTARTING
+            - UPDATING
+            - AUTO_UPDATING
+            - AUTO_UPGRADING
+            - DISABLED
           description: Output only. The current state of this Data Fusion instance.
         serviceEndpoint:
           type: string
