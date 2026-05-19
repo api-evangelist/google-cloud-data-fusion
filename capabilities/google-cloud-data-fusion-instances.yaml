@@ -1,0 +1,364 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Google Cloud Data Fusion API — Instances
+  description: 'Google Cloud Data Fusion API — Instances. 6 operations. Lead operation: Google Cloud Data Fusion List Data
+    Fusion instances. Self-contained Naftiko capability covering one Google Cloud Data Fusion business surface.'
+  tags:
+  - Google Cloud Data Fusion
+  - Instances
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GOOGLE_CLOUD_DATA_FUSION_API_KEY: GOOGLE_CLOUD_DATA_FUSION_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: google-cloud-data-fusion-instances
+    baseUri: https://datafusion.googleapis.com/v1
+    description: Google Cloud Data Fusion API — Instances business capability. Self-contained, no shared references.
+    resources:
+    - name: projects-projectId-locations-location-instances
+      path: /projects/{projectId}/locations/{location}/instances
+      operations:
+      - name: listinstances
+        method: GET
+        description: Google Cloud Data Fusion List Data Fusion instances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          description: The project ID.
+          required: true
+        - name: location
+          in: path
+          type: string
+          description: The location (region).
+          required: true
+        - name: pageSize
+          in: query
+          type: integer
+          description: Maximum number of instances to return.
+        - name: pageToken
+          in: query
+          type: string
+          description: Page token for pagination.
+      - name: createinstance
+        method: POST
+        description: Google Cloud Data Fusion Create a Data Fusion instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: instanceId
+          in: query
+          type: string
+          description: The name of the instance to create.
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+    - name: projects-projectId-locations-location-instances-instanceId
+      path: /projects/{projectId}/locations/{location}/instances/{instanceId}
+      operations:
+      - name: getinstance
+        method: GET
+        description: Google Cloud Data Fusion Get a Data Fusion instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: instanceId
+          in: path
+          type: string
+          required: true
+      - name: updateinstance
+        method: PATCH
+        description: Google Cloud Data Fusion Update a Data Fusion instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: instanceId
+          in: path
+          type: string
+          required: true
+        - name: updateMask
+          in: query
+          type: string
+          description: Field mask for update.
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: true
+      - name: deleteinstance
+        method: DELETE
+        description: Google Cloud Data Fusion Delete a Data Fusion instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: instanceId
+          in: path
+          type: string
+          required: true
+    - name: projects-projectId-locations-location-instances-instanceId}:restart
+      path: /projects/{projectId}/locations/{location}/instances/{instanceId}:restart
+      operations:
+      - name: restartinstance
+        method: POST
+        description: Google Cloud Data Fusion Restart a Data Fusion instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: projectId
+          in: path
+          type: string
+          required: true
+        - name: location
+          in: path
+          type: string
+          required: true
+        - name: instanceId
+          in: path
+          type: string
+          required: true
+    authentication:
+      type: bearer
+      token: '{{env.GOOGLE_CLOUD_DATA_FUSION_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: google-cloud-data-fusion-instances-rest
+    port: 8080
+    description: REST adapter for Google Cloud Data Fusion API — Instances. One Spectral-compliant resource per consumed operation,
+      prefixed with /v1.
+    resources:
+    - path: /v1/projects/{projectid}/locations/{location}/instances
+      name: projects-projectid-locations-location-instances
+      description: REST surface for projects-projectId-locations-location-instances.
+      operations:
+      - method: GET
+        name: listinstances
+        description: Google Cloud Data Fusion List Data Fusion instances
+        call: google-cloud-data-fusion-instances.listinstances
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          pageSize: rest.pageSize
+          pageToken: rest.pageToken
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: createinstance
+        description: Google Cloud Data Fusion Create a Data Fusion instance
+        call: google-cloud-data-fusion-instances.createinstance
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          instanceId: rest.instanceId
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{projectid}/locations/{location}/instances/{instanceid}
+      name: projects-projectid-locations-location-instances-instanceid
+      description: REST surface for projects-projectId-locations-location-instances-instanceId.
+      operations:
+      - method: GET
+        name: getinstance
+        description: Google Cloud Data Fusion Get a Data Fusion instance
+        call: google-cloud-data-fusion-instances.getinstance
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          instanceId: rest.instanceId
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: updateinstance
+        description: Google Cloud Data Fusion Update a Data Fusion instance
+        call: google-cloud-data-fusion-instances.updateinstance
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          instanceId: rest.instanceId
+          updateMask: rest.updateMask
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: DELETE
+        name: deleteinstance
+        description: Google Cloud Data Fusion Delete a Data Fusion instance
+        call: google-cloud-data-fusion-instances.deleteinstance
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          instanceId: rest.instanceId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/projects/{projectid}/locations/{location}/instances/instanceid-restart
+      name: projects-projectid-locations-location-instances-instanceid-restart
+      description: REST surface for projects-projectId-locations-location-instances-instanceId}:restart.
+      operations:
+      - method: POST
+        name: restartinstance
+        description: Google Cloud Data Fusion Restart a Data Fusion instance
+        call: google-cloud-data-fusion-instances.restartinstance
+        with:
+          projectId: rest.projectId
+          location: rest.location
+          instanceId: rest.instanceId
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: google-cloud-data-fusion-instances-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Google Cloud Data Fusion API — Instances. One tool per consumed operation, routed inline
+      through this capability's consumes block.
+    tools:
+    - name: google-cloud-data-fusion-list
+      description: Google Cloud Data Fusion List Data Fusion instances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-data-fusion-instances.listinstances
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        pageSize: tools.pageSize
+        pageToken: tools.pageToken
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-data-fusion-create
+      description: Google Cloud Data Fusion Create a Data Fusion instance
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-data-fusion-instances.createinstance
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        instanceId: tools.instanceId
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-data-fusion-get
+      description: Google Cloud Data Fusion Get a Data Fusion instance
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: google-cloud-data-fusion-instances.getinstance
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        instanceId: tools.instanceId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-data-fusion-update
+      description: Google Cloud Data Fusion Update a Data Fusion instance
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: google-cloud-data-fusion-instances.updateinstance
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        instanceId: tools.instanceId
+        updateMask: tools.updateMask
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-data-fusion-delete
+      description: Google Cloud Data Fusion Delete a Data Fusion instance
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: google-cloud-data-fusion-instances.deleteinstance
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        instanceId: tools.instanceId
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: google-cloud-data-fusion-restart
+      description: Google Cloud Data Fusion Restart a Data Fusion instance
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: google-cloud-data-fusion-instances.restartinstance
+      with:
+        projectId: tools.projectId
+        location: tools.location
+        instanceId: tools.instanceId
+      outputParameters:
+      - type: object
+        mapping: $.
