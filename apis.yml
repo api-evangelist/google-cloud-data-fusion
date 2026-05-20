@@ -10,64 +10,66 @@ modified: '2026-05-19'
 specificationVersion: '0.19'
 type: Index
 tags:
-- Data Integration
-- Data Pipelines
-- ETL
-- Google Cloud
-apis:
-- name: Google Cloud Data Fusion API
-  description: The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances
-    and pipelines. It allows you to provision instances, configure environments, and manage the lifecycle of data integration
-    pipelines within Google Cloud Platform.
-  image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
-  humanURL: https://cloud.google.com/data-fusion/docs
-  baseURL: https://datafusion.googleapis.com
-  tags:
   - Data Integration
+  - Data Pipelines
   - ETL
-  - Pipelines
-  properties:
-  - type: Documentation
-    url: https://cloud.google.com/data-fusion/docs/reference/rest
-  - type: OpenAPI
-    url: openapi/google-cloud-data-fusion-openapi.yml
-  - type: Authentication
-    url: https://cloud.google.com/data-fusion/docs/concepts/iam
+  - Google Cloud
+apis:
+  - name: Google Cloud Data Fusion API
+    description: The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances
+      and pipelines. It allows you to provision instances, configure environments, and manage the lifecycle of data integration
+      pipelines within Google Cloud Platform.
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://cloud.google.com/data-fusion/docs
+    baseURL: https://datafusion.googleapis.com
+    tags:
+    - Data Integration
+    - ETL
+    - Pipelines
+    properties:
+    - type: Documentation
+      url: https://cloud.google.com/data-fusion/docs/reference/rest
+    - type: OpenAPI
+      url: openapi/google-cloud-data-fusion-openapi.yml
+    - type: Authentication
+      url: https://cloud.google.com/data-fusion/docs/concepts/iam
+    - type: GettingStarted
+      url: https://cloud.google.com/data-fusion/docs/quickstarts
+    - type: JSONSchema
+      url: json-schema/google-cloud-data-fusion-instance-schema.json
+    - type: NaftikoCapability
+      url: capabilities/google-cloud-data-fusion-instances.yaml
+    - type: NaftikoCapability
+      url: capabilities/google-cloud-data-fusion-locations.yaml
+    - type: NaftikoCapability
+      url: capabilities/google-cloud-data-fusion-operations.yaml
+common:
+  - type: GitHubOrganization
+    url: https://github.com/googleapis
+  - type: Portal
+    url: https://cloud.google.com/data-fusion
   - type: GettingStarted
     url: https://cloud.google.com/data-fusion/docs/quickstarts
-  - type: JSONSchema
-    url: json-schema/google-cloud-data-fusion-instance-schema.json
-  - type: NaftikoCapability
-    url: capabilities/google-cloud-data-fusion-instances.yaml
-  - type: NaftikoCapability
-    url: capabilities/google-cloud-data-fusion-locations.yaml
-  - type: NaftikoCapability
-    url: capabilities/google-cloud-data-fusion-operations.yaml
-common:
-- type: Portal
-  url: https://cloud.google.com/data-fusion
-- type: GettingStarted
-  url: https://cloud.google.com/data-fusion/docs/quickstarts
-- type: Documentation
-  url: https://cloud.google.com/data-fusion/docs
-- type: Authentication
-  url: https://cloud.google.com/data-fusion/docs/concepts/iam
-- type: Pricing
-  url: https://cloud.google.com/data-fusion/pricing
-- type: TermsOfService
-  url: https://cloud.google.com/terms
-- type: PrivacyPolicy
-  url: https://policies.google.com/privacy
-- type: StatusPage
-  url: https://status.cloud.google.com/
-- type: Support
-  url: https://cloud.google.com/data-fusion/docs/support
-- type: JSONLD
-  url: json-ld/google-cloud-data-fusion-context.jsonld
-- type: Integrations
-  url: https://cloud.google.com/marketplace
+  - type: Documentation
+    url: https://cloud.google.com/data-fusion/docs
+  - type: Authentication
+    url: https://cloud.google.com/data-fusion/docs/concepts/iam
+  - type: Pricing
+    url: https://cloud.google.com/data-fusion/pricing
+  - type: TermsOfService
+    url: https://cloud.google.com/terms
+  - type: PrivacyPolicy
+    url: https://policies.google.com/privacy
+  - type: StatusPage
+    url: https://status.cloud.google.com/
+  - type: Support
+    url: https://cloud.google.com/data-fusion/docs/support
+  - type: JSONLD
+    url: json-ld/google-cloud-data-fusion-context.jsonld
+  - type: Integrations
+    url: https://cloud.google.com/marketplace
 integrations:
-- name: Become a Partner
+  - name: Become a Partner
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
