@@ -40,6 +40,8 @@ apis:
       - type: JSONSchema
         url: json-schema/google-cloud-data-fusion-instance-schema.json
 common:
+  - type: OAuthScopes
+    url: scopes/google-cloud-data-fusion-scopes.yml
   - type: GitHubOrganization
     url: https://github.com/googleapis
   - type: Portal
