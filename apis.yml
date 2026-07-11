@@ -40,6 +40,12 @@ apis:
       - type: JSONSchema
         url: json-schema/google-cloud-data-fusion-instance-schema.json
 common:
+  - type: VulnerabilityDisclosure
+    url: security/google-cloud-data-fusion-vulnerability-disclosure.yml
+  - type: DomainSecurity
+    url: security/google-cloud-data-fusion-domain-security.yml
+  - type: Authentication
+    url: authentication/google-cloud-data-fusion-authentication.yml
   - type: OAuthScopes
     url: scopes/google-cloud-data-fusion-scopes.yml
   - type: GitHubOrganization
