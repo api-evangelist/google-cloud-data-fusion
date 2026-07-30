@@ -4,7 +4,20 @@ description: >-
   Google Cloud Data Fusion is a fully managed, cloud-native data integration service that helps users build and manage
   ETL/ELT data pipelines. It provides a visual point-and-click interface for building data transformation pipelines,
   powered by the open-source CDAP framework.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-cloud-data-fusion.png
 url: https://raw.githubusercontent.com/api-evangelist/google-cloud-data-fusion/refs/heads/main/apis.yml
 created: '2026-03-13'
 modified: '2026-05-19'
@@ -16,30 +29,63 @@ tags:
   - ETL
   - Google Cloud
 apis:
-  - name: Google Cloud Data Fusion API
-    description: >-
-      The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances and
-      pipelines. It allows you to provision instances, configure environments, and manage the lifecycle of data
-      integration pipelines within Google Cloud Platform.
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    humanURL: https://cloud.google.com/data-fusion/docs
-    baseURL: https://datafusion.googleapis.com
-    tags:
-      - Data Integration
-      - ETL
-      - Pipelines
-    properties:
-      - type: Documentation
-        url: https://cloud.google.com/data-fusion/docs/reference/rest
-      - type: OpenAPI
-        url: openapi/google-cloud-data-fusion-openapi.yml
-      - type: Authentication
-        url: https://cloud.google.com/data-fusion/docs/concepts/iam
-      - type: GettingStarted
-        url: https://cloud.google.com/data-fusion/docs/quickstarts
-      - type: JSONSchema
-        url: json-schema/google-cloud-data-fusion-instance-schema.json
+- aid: google-cloud-data-fusion:google-cloud-data-fusion-instances-api
+  name: Google Cloud Data Fusion Instances API
+  description: Operations for managing Data Fusion instances
+  humanURL: https://cloud.google.com/data-fusion/docs
+  baseURL: https://datafusion.googleapis.com
+  tags:
+  - Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-data-fusion-instances-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/data-fusion/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/data-fusion/docs/concepts/iam
+  - type: GettingStarted
+    url: https://cloud.google.com/data-fusion/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/google-cloud-data-fusion-instance-schema.json
+- aid: google-cloud-data-fusion:google-cloud-data-fusion-locations-api
+  name: Google Cloud Data Fusion Locations API
+  description: Available locations for Data Fusion
+  humanURL: https://cloud.google.com/data-fusion/docs
+  baseURL: https://datafusion.googleapis.com
+  tags:
+  - Locations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-data-fusion-locations-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/data-fusion/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/data-fusion/docs/concepts/iam
+  - type: GettingStarted
+    url: https://cloud.google.com/data-fusion/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/google-cloud-data-fusion-instance-schema.json
+- aid: google-cloud-data-fusion:google-cloud-data-fusion-operations-api
+  name: Google Cloud Data Fusion Operations API
+  description: Long-running operation management
+  humanURL: https://cloud.google.com/data-fusion/docs
+  baseURL: https://datafusion.googleapis.com
+  tags:
+  - Operations
+  properties:
+  - type: OpenAPI
+    url: openapi/google-cloud-data-fusion-operations-api-openapi.yml
+  - type: Documentation
+    url: https://cloud.google.com/data-fusion/docs/reference/rest
+  - type: Authentication
+    url: https://cloud.google.com/data-fusion/docs/concepts/iam
+  - type: GettingStarted
+    url: https://cloud.google.com/data-fusion/docs/quickstarts
+  - type: JSONSchema
+    url: json-schema/google-cloud-data-fusion-instance-schema.json
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/google-cloud-data-fusion/overview
   - type: AgenticAccess
     url: agentic-access/google-cloud-data-fusion-agentic-access.yml
   - type: VulnerabilityDisclosure
