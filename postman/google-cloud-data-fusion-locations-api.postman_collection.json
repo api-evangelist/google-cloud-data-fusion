@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "258066bb-b9e7-48d0-9db8-04363305e455",
+    "name": "Google Cloud Data Fusion Instances Locations API",
+    "description": "The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances on Google Cloud Platform. It supports instance lifecycle management, namespace operations, and pipeline configuration.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:46:55.000Z",
+    "updatedAt": "2026-07-28T01:46:55.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-258066bb-b9e7-48d0-9db8-04363305e455"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "Google Cloud Data Fusion List available locations",
+                  "id": "a40a1291-500d-42e2-b0aa-b87b08a26126",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [
+                      {
+                        "key": "Accept",
+                        "value": "application/json"
+                      }
+                    ],
+                    "url": {
+                      "raw": "{{baseUrl}}/projects/:projectId/locations?pageSize=<integer>&pageToken=<string>",
+                      "host": [
+                        "{{baseUrl}}"
+                      ],
+                      "path": [
+                        "projects",
+                        ":projectId",
+                        "locations"
+                      ],
+                      "query": [
+                        {
+                          "description": "Maximum number of results to return.",
+                          "key": "pageSize",
+                          "value": "<integer>"
+                        },
+                        {
+                          "description": "Page token for pagination.",
+                          "key": "pageToken",
+                          "value": "<string>"
+                        }
+                      ],
+                      "variable": [
+                        {
+                          "id": "3cc7a6ff-a9c1-41f3-89fb-8dac3585e0a7",
+                          "key": "projectId",
+                          "value": "<string>",
+                          "description": "(Required) The project ID."
+                        }
+                      ]
+                    },
+                    "description": "Lists available locations for the given project."
+                  },
+                  "response": [
+                    {
+                      "id": "7aed33c7-9eb1-468c-977c-ea3d43a03658",
+                      "name": "Successful response",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                          {
+                            "key": "Accept",
+                            "value": "application/json"
+                          },
+                          {
+                            "description": "Added as a part of security scheme: oauth2",
+                            "key": "Authorization",
+                            "value": "<token>"
+                          }
+                        ],
+                        "url": {
+                          "raw": "{{baseUrl}}/projects/:projectId/locations?pageSize=<integer>&pageToken=<string>",
+                          "host": [
+                            "{{baseUrl}}"
+                          ],
+                          "path": [
+                            "projects",
+                            ":projectId",
+                            "locations"
+                          ],
+                          "query": [
+                            {
+                              "description": "Maximum number of results to return.",
+                              "key": "pageSize",
+                              "value": "<integer>"
+                            },
+                            {
+                              "description": "Page token for pagination.",
+                              "key": "pageToken",
+                              "value": "<string>"
+                            }
+                          ],
+                          "variable": [
+                            {
+                              "key": "projectId"
+                            }
+                          ]
+                        }
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n  \"locations\": [\n    {\n      \"name\": \"<string>\",\n      \"locationId\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"locationId\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\"\n}",
+                      "createdAt": "2026-07-28T01:46:55.000Z",
+                      "updatedAt": "2026-07-28T01:46:55.000Z",
+                      "uid": "35240-7aed33c7-9eb1-468c-977c-ea3d43a03658"
+                    }
+                  ],
+                  "createdAt": "2026-07-28T01:46:55.000Z",
+                  "updatedAt": "2026-07-28T01:46:55.000Z",
+                  "uid": "35240-a40a1291-500d-42e2-b0aa-b87b08a26126"
+                }
+              ],
+              "id": "2cf8c736-4d3e-4a49-bf15-e596b9901870",
+              "createdAt": "2026-07-28T01:46:55.000Z",
+              "updatedAt": "2026-07-28T01:46:55.000Z",
+              "uid": "35240-2cf8c736-4d3e-4a49-bf15-e596b9901870"
+            }
+          ],
+          "id": "223ee594-01c9-42dd-b0d9-6c775a676f0a",
+          "createdAt": "2026-07-28T01:46:55.000Z",
+          "updatedAt": "2026-07-28T01:46:55.000Z",
+          "uid": "35240-223ee594-01c9-42dd-b0d9-6c775a676f0a"
+        }
+      ],
+      "id": "b5cd2e2a-ab95-4b83-965d-c351682321cb",
+      "createdAt": "2026-07-28T01:46:55.000Z",
+      "updatedAt": "2026-07-28T01:46:55.000Z",
+      "uid": "35240-b5cd2e2a-ab95-4b83-965d-c351682321cb"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://datafusion.googleapis.com/v1"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "provider": "google-cloud-data-fusion",
+  "sources": [
+    "google-cloud-data-fusion-instances-api-openapi.yml",
+    "google-cloud-data-fusion-locations-api-openapi.yml",
+    "google-cloud-data-fusion-operations-api-openapi.yml"
+  ],
+  "outputs": [
+    "google-cloud-data-fusion-instances-api-openapi.yml",
+    "google-cloud-data-fusion-locations-api-openapi.yml",
+    "google-cloud-data-fusion-operations-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

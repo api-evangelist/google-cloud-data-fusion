@@ -1,0 +1,873 @@
+{
+  "info": {
+    "_postman_id": "d9fe5739-b3b0-41e4-8926-2c0ea76605af",
+    "name": "Google Cloud Data Fusion Instances API",
+    "description": "The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances on Google Cloud Platform. It supports instance lifecycle management, namespace operations, and pipeline configuration.\n\nContact Support:\n Name: Google Cloud",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T01:46:53.000Z",
+    "updatedAt": "2026-07-28T01:46:53.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-d9fe5739-b3b0-41e4-8926-2c0ea76605af"
+  },
+  "item": [
+    {
+      "name": "projects",
+      "item": [
+        {
+          "name": "{projectId}",
+          "item": [
+            {
+              "name": "locations",
+              "item": [
+                {
+                  "name": "{location}",
+                  "item": [
+                    {
+                      "name": "instances",
+                      "item": [
+                        {
+                          "name": "{instanceId}",
+                          "item": [
+                            {
+                              "name": "Google Cloud Data Fusion Get a Data Fusion instance",
+                              "id": "c49ed43e-6053-4e50-ac46-b7e18535cc2e",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances",
+                                    ":instanceId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "2735810a-7844-4cb1-9c84-8d5bd422a85c",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "b0ea7562-53ff-49d2-83a0-a7ea30b95804",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "dce29e43-1b1c-4c27-a0db-4c19a0591f87",
+                                      "key": "instanceId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Gets details of a single Data Fusion instance."
+                              },
+                              "response": [
+                                {
+                                  "id": "027c1b2d-2894-4cb6-849e-e1fc5a99e384",
+                                  "name": "Successful response",
+                                  "originalRequest": {
+                                    "method": "GET",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "instances",
+                                        ":instanceId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "instanceId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"ENTERPRISE\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableStackdriverMonitoring\": \"<boolean>\",\n  \"privateInstance\": \"<boolean>\",\n  \"networkConfig\": {\n    \"network\": \"<string>\",\n    \"ipAllocation\": \"<string>\"\n  },\n  \"labels\": {\n    \"inc8\": \"<string>\",\n    \"eiusmod2f\": \"<string>\",\n    \"autec\": \"<string>\"\n  },\n  \"options\": {\n    \"seda6a\": \"<string>\",\n    \"veniam_cf7\": \"<string>\"\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"state\": \"AUTO_UPDATING\",\n  \"serviceEndpoint\": \"<string>\",\n  \"zone\": \"<string>\",\n  \"version\": \"<string>\",\n  \"serviceAccount\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiEndpoint\": \"<string>\"\n}",
+                                  "createdAt": "2026-07-28T01:46:54.000Z",
+                                  "updatedAt": "2026-07-28T01:46:54.000Z",
+                                  "uid": "35240-027c1b2d-2894-4cb6-849e-e1fc5a99e384"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-c49ed43e-6053-4e50-ac46-b7e18535cc2e"
+                            },
+                            {
+                              "name": "Google Cloud Data Fusion Update a Data Fusion instance",
+                              "id": "14330906-7b8a-4f9e-a915-7d39223c233a",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "PATCH",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"ENTERPRISE\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableStackdriverMonitoring\": \"<boolean>\",\n  \"privateInstance\": \"<boolean>\",\n  \"networkConfig\": {\n    \"network\": \"<string>\",\n    \"ipAllocation\": \"<string>\"\n  },\n  \"labels\": {\n    \"inc8\": \"<string>\",\n    \"eiusmod2f\": \"<string>\",\n    \"autec\": \"<string>\"\n  },\n  \"options\": {\n    \"seda6a\": \"<string>\",\n    \"veniam_cf7\": \"<string>\"\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"state\": \"AUTO_UPDATING\",\n  \"serviceEndpoint\": \"<string>\",\n  \"zone\": \"<string>\",\n  \"version\": \"<string>\",\n  \"serviceAccount\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiEndpoint\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId?updateMask=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances",
+                                    ":instanceId"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "Field mask for update.",
+                                      "key": "updateMask",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "21461f96-b3e4-4cff-bb88-c5e121b464a9",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "055523e8-44a2-4aed-bcf8-8543e52491d1",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "b9847092-0d8e-4426-9765-85481df3f08c",
+                                      "key": "instanceId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Updates a single Data Fusion instance."
+                              },
+                              "response": [
+                                {
+                                  "id": "2148e770-c05f-44e1-a3f7-2c79fa0ad5d7",
+                                  "name": "Successful response with long-running operation",
+                                  "originalRequest": {
+                                    "method": "PATCH",
+                                    "header": [
+                                      {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "body": {
+                                      "mode": "raw",
+                                      "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"ENTERPRISE\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableStackdriverMonitoring\": \"<boolean>\",\n  \"privateInstance\": \"<boolean>\",\n  \"networkConfig\": {\n    \"network\": \"<string>\",\n    \"ipAllocation\": \"<string>\"\n  },\n  \"labels\": {\n    \"inc8\": \"<string>\",\n    \"eiusmod2f\": \"<string>\",\n    \"autec\": \"<string>\"\n  },\n  \"options\": {\n    \"seda6a\": \"<string>\",\n    \"veniam_cf7\": \"<string>\"\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"state\": \"AUTO_UPDATING\",\n  \"serviceEndpoint\": \"<string>\",\n  \"zone\": \"<string>\",\n  \"version\": \"<string>\",\n  \"serviceAccount\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiEndpoint\": \"<string>\"\n}",
+                                      "options": {
+                                        "raw": {
+                                          "headerFamily": "json",
+                                          "language": "json"
+                                        }
+                                      }
+                                    },
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId?updateMask=<string>",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "instances",
+                                        ":instanceId"
+                                      ],
+                                      "query": [
+                                        {
+                                          "description": "Field mask for update.",
+                                          "key": "updateMask",
+                                          "value": "<string>"
+                                        }
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "instanceId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"metadata\": {},\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {}\n}",
+                                  "createdAt": "2026-07-28T01:46:54.000Z",
+                                  "updatedAt": "2026-07-28T01:46:54.000Z",
+                                  "uid": "35240-2148e770-c05f-44e1-a3f7-2c79fa0ad5d7"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-14330906-7b8a-4f9e-a915-7d39223c233a"
+                            },
+                            {
+                              "name": "Google Cloud Data Fusion Delete a Data Fusion instance",
+                              "id": "3c16b37d-6731-49f3-b086-612ddb612af1",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "DELETE",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances",
+                                    ":instanceId"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "c3dcb83f-3163-457b-9131-1cf9916f7807",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "d4898bc5-94f8-4feb-8211-4c9f53fe7b40",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "0c6db7ad-a8d8-4990-89c0-ae1e2b0abe88",
+                                      "key": "instanceId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Deletes a single Data Fusion instance."
+                              },
+                              "response": [
+                                {
+                                  "id": "2616d587-6d18-4660-aa01-cfa8ab81d216",
+                                  "name": "Successful response with long-running operation",
+                                  "originalRequest": {
+                                    "method": "DELETE",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/:instanceId",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "instances",
+                                        ":instanceId"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        },
+                                        {
+                                          "key": "instanceId"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"metadata\": {},\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {}\n}",
+                                  "createdAt": "2026-07-28T01:46:54.000Z",
+                                  "updatedAt": "2026-07-28T01:46:54.000Z",
+                                  "uid": "35240-2616d587-6d18-4660-aa01-cfa8ab81d216"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-3c16b37d-6731-49f3-b086-612ddb612af1"
+                            }
+                          ],
+                          "id": "089669f5-3287-4663-93c8-40f2ef1b68f2",
+                          "createdAt": "2026-07-28T01:46:54.000Z",
+                          "updatedAt": "2026-07-28T01:46:54.000Z",
+                          "uid": "35240-089669f5-3287-4663-93c8-40f2ef1b68f2"
+                        },
+                        {
+                          "name": "{instanceId}:restart",
+                          "item": [
+                            {
+                              "name": "Google Cloud Data Fusion Restart a Data Fusion instance",
+                              "id": "1661e3b9-7807-4b93-9cd0-629db1dd75c9",
+                              "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                              },
+                              "request": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/{{instanceId}}:restart",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances",
+                                    "{{instanceId}}:restart"
+                                  ],
+                                  "variable": [
+                                    {
+                                      "id": "049507d0-89c9-4284-898d-49e7e1cec38e",
+                                      "key": "projectId",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    },
+                                    {
+                                      "id": "0b15e7c7-d60e-4712-85e4-d506b96109e5",
+                                      "key": "location",
+                                      "value": "<string>",
+                                      "description": "(Required) "
+                                    }
+                                  ]
+                                },
+                                "description": "Restarts a single Data Fusion instance."
+                              },
+                              "response": [
+                                {
+                                  "id": "1f4a3f93-79b7-4d68-8bf1-f749f0876b06",
+                                  "name": "Successful response with long-running operation",
+                                  "originalRequest": {
+                                    "method": "POST",
+                                    "header": [
+                                      {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                      },
+                                      {
+                                        "description": "Added as a part of security scheme: oauth2",
+                                        "key": "Authorization",
+                                        "value": "<token>"
+                                      }
+                                    ],
+                                    "url": {
+                                      "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances/{{instanceId}}:restart",
+                                      "host": [
+                                        "{{baseUrl}}"
+                                      ],
+                                      "path": [
+                                        "projects",
+                                        ":projectId",
+                                        "locations",
+                                        ":location",
+                                        "instances",
+                                        "{{instanceId}}:restart"
+                                      ],
+                                      "variable": [
+                                        {
+                                          "key": "projectId"
+                                        },
+                                        {
+                                          "key": "location"
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  "status": "OK",
+                                  "code": 200,
+                                  "_postman_previewlanguage": "json",
+                                  "header": [
+                                    {
+                                      "key": "Content-Type",
+                                      "value": "application/json"
+                                    }
+                                  ],
+                                  "cookie": [],
+                                  "responseTime": null,
+                                  "body": "{\n  \"name\": \"<string>\",\n  \"metadata\": {},\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {}\n}",
+                                  "createdAt": "2026-07-28T01:46:54.000Z",
+                                  "updatedAt": "2026-07-28T01:46:54.000Z",
+                                  "uid": "35240-1f4a3f93-79b7-4d68-8bf1-f749f0876b06"
+                                }
+                              ],
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-1661e3b9-7807-4b93-9cd0-629db1dd75c9"
+                            }
+                          ],
+                          "id": "41f4e313-ba97-4d4a-a1fd-eacad86ccd3a",
+                          "createdAt": "2026-07-28T01:46:54.000Z",
+                          "updatedAt": "2026-07-28T01:46:54.000Z",
+                          "uid": "35240-41f4e313-ba97-4d4a-a1fd-eacad86ccd3a"
+                        },
+                        {
+                          "name": "Google Cloud Data Fusion List Data Fusion instances",
+                          "id": "ae272aa5-46b7-4d99-ae1e-48dde0b2f6cb",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "GET",
+                            "header": [
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances?pageSize=<integer>&pageToken=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "instances"
+                              ],
+                              "query": [
+                                {
+                                  "description": "Maximum number of instances to return.",
+                                  "key": "pageSize",
+                                  "value": "<integer>"
+                                },
+                                {
+                                  "description": "Page token for pagination.",
+                                  "key": "pageToken",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "bd6a9117-0d56-4a95-b7fe-3d2a69e0d1ec",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) The project ID."
+                                },
+                                {
+                                  "id": "570e17bb-286e-44f5-8443-ac07aefe01d3",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) The location (region)."
+                                }
+                              ]
+                            },
+                            "description": "Lists Data Fusion instances in the specified project and location."
+                          },
+                          "response": [
+                            {
+                              "id": "9bd0aa73-82ab-4fbe-afe4-4e6fcdbc68fe",
+                              "name": "Successful response",
+                              "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances?pageSize=<integer>&pageToken=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "Maximum number of instances to return.",
+                                      "key": "pageSize",
+                                      "value": "<integer>"
+                                    },
+                                    {
+                                      "description": "Page token for pagination.",
+                                      "key": "pageToken",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"instances\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"type\": \"DEVELOPER\",\n      \"enableStackdriverLogging\": \"<boolean>\",\n      \"enableStackdriverMonitoring\": \"<boolean>\",\n      \"privateInstance\": \"<boolean>\",\n      \"networkConfig\": {\n        \"network\": \"<string>\",\n        \"ipAllocation\": \"<string>\"\n      },\n      \"labels\": {\n        \"aliquip_061\": \"<string>\"\n      },\n      \"options\": {\n        \"qui_13\": \"<string>\",\n        \"amet0\": \"<string>\"\n      },\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"state\": \"FAILED\",\n      \"serviceEndpoint\": \"<string>\",\n      \"zone\": \"<string>\",\n      \"version\": \"<string>\",\n      \"serviceAccount\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"apiEndpoint\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"type\": \"DEVELOPER\",\n      \"enableStackdriverLogging\": \"<boolean>\",\n      \"enableStackdriverMonitoring\": \"<boolean>\",\n      \"privateInstance\": \"<boolean>\",\n      \"networkConfig\": {\n        \"network\": \"<string>\",\n        \"ipAllocation\": \"<string>\"\n      },\n      \"labels\": {\n        \"irure_a\": \"<string>\",\n        \"mollit_07\": \"<string>\"\n      },\n      \"options\": {\n        \"eiusmodca\": \"<string>\",\n        \"ea614\": \"<string>\"\n      },\n      \"createTime\": \"<dateTime>\",\n      \"updateTime\": \"<dateTime>\",\n      \"state\": \"AUTO_UPGRADING\",\n      \"serviceEndpoint\": \"<string>\",\n      \"zone\": \"<string>\",\n      \"version\": \"<string>\",\n      \"serviceAccount\": \"<string>\",\n      \"displayName\": \"<string>\",\n      \"apiEndpoint\": \"<string>\"\n    }\n  ],\n  \"nextPageToken\": \"<string>\",\n  \"unreachable\": [\n    \"<string>\",\n    \"<string>\"\n  ]\n}",
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-9bd0aa73-82ab-4fbe-afe4-4e6fcdbc68fe"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:46:54.000Z",
+                          "updatedAt": "2026-07-28T01:46:54.000Z",
+                          "uid": "35240-ae272aa5-46b7-4d99-ae1e-48dde0b2f6cb"
+                        },
+                        {
+                          "name": "Google Cloud Data Fusion Create a Data Fusion instance",
+                          "id": "e59f7c5e-3cb6-4e4e-8159-b77cc1378c93",
+                          "protocolProfileBehavior": {
+                            "disableBodyPruning": true
+                          },
+                          "request": {
+                            "method": "POST",
+                            "header": [
+                              {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                              },
+                              {
+                                "key": "Accept",
+                                "value": "application/json"
+                              }
+                            ],
+                            "body": {
+                              "mode": "raw",
+                              "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"ENTERPRISE\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableStackdriverMonitoring\": \"<boolean>\",\n  \"privateInstance\": \"<boolean>\",\n  \"networkConfig\": {\n    \"network\": \"<string>\",\n    \"ipAllocation\": \"<string>\"\n  },\n  \"labels\": {\n    \"inc8\": \"<string>\",\n    \"eiusmod2f\": \"<string>\",\n    \"autec\": \"<string>\"\n  },\n  \"options\": {\n    \"seda6a\": \"<string>\",\n    \"veniam_cf7\": \"<string>\"\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"state\": \"AUTO_UPDATING\",\n  \"serviceEndpoint\": \"<string>\",\n  \"zone\": \"<string>\",\n  \"version\": \"<string>\",\n  \"serviceAccount\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiEndpoint\": \"<string>\"\n}",
+                              "options": {
+                                "raw": {
+                                  "headerFamily": "json",
+                                  "language": "json"
+                                }
+                              }
+                            },
+                            "url": {
+                              "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances?instanceId=<string>",
+                              "host": [
+                                "{{baseUrl}}"
+                              ],
+                              "path": [
+                                "projects",
+                                ":projectId",
+                                "locations",
+                                ":location",
+                                "instances"
+                              ],
+                              "query": [
+                                {
+                                  "description": "(Required) The name of the instance to create.",
+                                  "key": "instanceId",
+                                  "value": "<string>"
+                                }
+                              ],
+                              "variable": [
+                                {
+                                  "id": "ee4da166-93b7-4648-a837-d20c78690d09",
+                                  "key": "projectId",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                },
+                                {
+                                  "id": "85ca9e0b-072a-40ef-ad28-456c5ef82291",
+                                  "key": "location",
+                                  "value": "<string>",
+                                  "description": "(Required) "
+                                }
+                              ]
+                            },
+                            "description": "Creates a new Data Fusion instance in the specified project and location."
+                          },
+                          "response": [
+                            {
+                              "id": "6e2b2609-9c6c-4751-b878-f07186b390f7",
+                              "name": "Successful response with long-running operation",
+                              "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                  {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "key": "Accept",
+                                    "value": "application/json"
+                                  },
+                                  {
+                                    "description": "Added as a part of security scheme: oauth2",
+                                    "key": "Authorization",
+                                    "value": "<token>"
+                                  }
+                                ],
+                                "body": {
+                                  "mode": "raw",
+                                  "raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"type\": \"ENTERPRISE\",\n  \"enableStackdriverLogging\": \"<boolean>\",\n  \"enableStackdriverMonitoring\": \"<boolean>\",\n  \"privateInstance\": \"<boolean>\",\n  \"networkConfig\": {\n    \"network\": \"<string>\",\n    \"ipAllocation\": \"<string>\"\n  },\n  \"labels\": {\n    \"inc8\": \"<string>\",\n    \"eiusmod2f\": \"<string>\",\n    \"autec\": \"<string>\"\n  },\n  \"options\": {\n    \"seda6a\": \"<string>\",\n    \"veniam_cf7\": \"<string>\"\n  },\n  \"createTime\": \"<dateTime>\",\n  \"updateTime\": \"<dateTime>\",\n  \"state\": \"AUTO_UPDATING\",\n  \"serviceEndpoint\": \"<string>\",\n  \"zone\": \"<string>\",\n  \"version\": \"<string>\",\n  \"serviceAccount\": \"<string>\",\n  \"displayName\": \"<string>\",\n  \"apiEndpoint\": \"<string>\"\n}",
+                                  "options": {
+                                    "raw": {
+                                      "headerFamily": "json",
+                                      "language": "json"
+                                    }
+                                  }
+                                },
+                                "url": {
+                                  "raw": "{{baseUrl}}/projects/:projectId/locations/:location/instances?instanceId=<string>",
+                                  "host": [
+                                    "{{baseUrl}}"
+                                  ],
+                                  "path": [
+                                    "projects",
+                                    ":projectId",
+                                    "locations",
+                                    ":location",
+                                    "instances"
+                                  ],
+                                  "query": [
+                                    {
+                                      "description": "(Required) The name of the instance to create.",
+                                      "key": "instanceId",
+                                      "value": "<string>"
+                                    }
+                                  ],
+                                  "variable": [
+                                    {
+                                      "key": "projectId"
+                                    },
+                                    {
+                                      "key": "location"
+                                    }
+                                  ]
+                                }
+                              },
+                              "status": "OK",
+                              "code": 200,
+                              "_postman_previewlanguage": "json",
+                              "header": [
+                                {
+                                  "key": "Content-Type",
+                                  "value": "application/json"
+                                }
+                              ],
+                              "cookie": [],
+                              "responseTime": null,
+                              "body": "{\n  \"name\": \"<string>\",\n  \"metadata\": {},\n  \"done\": \"<boolean>\",\n  \"error\": {\n    \"code\": \"<integer>\",\n    \"message\": \"<string>\"\n  },\n  \"response\": {}\n}",
+                              "createdAt": "2026-07-28T01:46:54.000Z",
+                              "updatedAt": "2026-07-28T01:46:54.000Z",
+                              "uid": "35240-6e2b2609-9c6c-4751-b878-f07186b390f7"
+                            }
+                          ],
+                          "createdAt": "2026-07-28T01:46:54.000Z",
+                          "updatedAt": "2026-07-28T01:46:54.000Z",
+                          "uid": "35240-e59f7c5e-3cb6-4e4e-8159-b77cc1378c93"
+                        }
+                      ],
+                      "id": "5128145e-8906-4f18-9814-1103c9e968cb",
+                      "createdAt": "2026-07-28T01:46:54.000Z",
+                      "updatedAt": "2026-07-28T01:46:54.000Z",
+                      "uid": "35240-5128145e-8906-4f18-9814-1103c9e968cb"
+                    }
+                  ],
+                  "id": "bdffa772-2116-4bbf-b558-f146e7d605a3",
+                  "createdAt": "2026-07-28T01:46:54.000Z",
+                  "updatedAt": "2026-07-28T01:46:54.000Z",
+                  "uid": "35240-bdffa772-2116-4bbf-b558-f146e7d605a3"
+                }
+              ],
+              "id": "bca9533d-2168-4b35-94ab-0732f4553ed9",
+              "createdAt": "2026-07-28T01:46:54.000Z",
+              "updatedAt": "2026-07-28T01:46:54.000Z",
+              "uid": "35240-bca9533d-2168-4b35-94ab-0732f4553ed9"
+            }
+          ],
+          "id": "653f7e9c-897d-49ce-aca7-75a6760374c2",
+          "createdAt": "2026-07-28T01:46:54.000Z",
+          "updatedAt": "2026-07-28T01:46:54.000Z",
+          "uid": "35240-653f7e9c-897d-49ce-aca7-75a6760374c2"
+        }
+      ],
+      "id": "936408e7-dbf4-4f2c-b91b-43efa7818764",
+      "createdAt": "2026-07-28T01:46:54.000Z",
+      "updatedAt": "2026-07-28T01:46:54.000Z",
+      "uid": "35240-936408e7-dbf4-4f2c-b91b-43efa7818764"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "scope",
+        "value": "https://www.googleapis.com/auth/cloud-platform",
+        "type": "string"
+      },
+      {
+        "key": "accessTokenUrl",
+        "value": "https://oauth2.googleapis.com/token",
+        "type": "string"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://accounts.google.com/o/oauth2/auth",
+        "type": "string"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://datafusion.googleapis.com/v1"
+    },
+    {
+      "key": "instanceId",
+      "value": "<string>"
+    }
+  ]
+}
