@@ -25,6 +25,11 @@ specificationVersion: '0.23'
 type: Index
 tags:
   - Data Integration
+  - Data Pipeline
+  - ETL
+  - Google Cloud
+tags_raw:
+  - Data Integration
   - Data Pipelines
   - ETL
   - Google Cloud
@@ -70,7 +75,8 @@ apis:
   description: Long-running operation management
   humanURL: https://cloud.google.com/data-fusion/docs
   baseURL: https://datafusion.googleapis.com
-  tags:
+  tags: []
+  tags_raw:
   - Operations
   properties:
   - type: OpenAPI
