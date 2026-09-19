@@ -70,6 +70,8 @@ apis:
   humanURL: https://cloud.google.com/data-fusion/docs
   baseURL: https://datafusion.googleapis.com
   tags:
+  - Location
+  tags_raw:
   - Locations
   properties:
   - type: OpenAPI
