@@ -1,4 +1,4 @@
-# Google Cloud Data Fusion (google-cloud-data-fusion)
+# Google Cloud Data Fusion
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,65 +66,155 @@
 
 Google Cloud Data Fusion is a fully managed, cloud-native data integration service that helps users build and manage ETL/ELT data pipelines. It provides a visual point-and-click interface for building data transformation pipelines, powered by the open-source CDAP framework.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/google-cloud-data-fusion/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/google-cloud-data-fusion/refs/heads/main/apis.yml)
+**Areas:** Data Integration · Data Pipeline · ETL · Google Cloud
 
-## Scope
+## Google Cloud Data Fusion on APIs.io
 
-- **Type:** Index
+Everything profiled for Google Cloud Data Fusion is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/google-cloud-data-fusion/](https://apis.io/providers/google-cloud-data-fusion/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (3)
 
-- Data Integration
-- Data Pipelines
-- ETL
-- Google Cloud
+- [Google Cloud Data Fusion Instances API](https://apis.io/apis/google-cloud-data-fusion/google-cloud-data-fusion-instances-api/) — Operations for managing Data Fusion instances
+- [Google Cloud Data Fusion Locations API](https://apis.io/apis/google-cloud-data-fusion/google-cloud-data-fusion-locations-api/) — Available locations for Data Fusion
+- [Google Cloud Data Fusion Operations API](https://apis.io/apis/google-cloud-data-fusion/google-cloud-data-fusion-operations-api/) — Long-running operation management
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-13
-- **Modified:** 2026-05-19
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Google Cloud Data Fusion API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-The Cloud Data Fusion API provides programmatic access to create, manage, and monitor Data Fusion instances and pipelines. It allows you to provision instances, configure environments, and manage the lifecycle of data integration pipelines within Google Cloud Platform.
+- [Google Cloud Data Fusion Agentic Access](https://apis.io/agentic-access/google-cloud-data-fusion/google-cloud-data-fusion-agentic-access/)
 
-- **Human URL:** [https://cloud.google.com/data-fusion/docs](https://cloud.google.com/data-fusion/docs)
-- **Base URL:** `https://datafusion.googleapis.com`
+#### JSON Schema (1)
 
-#### Tags
+The data models the API reads and writes.
 
-- Data Integration
-- ETL
-- Pipelines
+- [Google Cloud Data Fusion Instance](https://apis.io/schemas/google-cloud-data-fusion/google-cloud-data-fusion-instance/)
 
-#### Properties
+#### JSON-LD (1)
 
-- [Documentation](https://cloud.google.com/data-fusion/docs/reference/rest)
-- [OpenAPI](openapi/google-cloud-data-fusion-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/google-cloud-data-fusion.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/google-cloud-data-fusion.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Authentication](https://cloud.google.com/data-fusion/docs/concepts/iam)
-- [Getting Started](https://cloud.google.com/data-fusion/docs/quickstarts)
-- [JSON Schema](json-schema/google-cloud-data-fusion-instance-schema.json) — [JSON Schema](https://json-schema.org/specification)
+Linked-data contexts for the provider's vocabulary.
 
-## Common Properties
+- [Google Cloud Data Fusion Context](https://apis.io/jsonld/google-cloud-data-fusion/google-cloud-data-fusion-context/)
 
-- [GitHub Organization](https://github.com/googleapis)
-- [Portal](https://cloud.google.com/data-fusion)
-- [Getting Started](https://cloud.google.com/data-fusion/docs/quickstarts)
+#### Collections (7)
+
+Postman and Open Collection request collections.
+
+- [Google Cloud Data Fusion API](https://apis.io/collections/google-cloud-data-fusion/open-google-cloud-data-fusion/)
+- [Google Cloud Data Fusion Instances API](https://apis.io/collections/google-cloud-data-fusion/open-google-cloud-data-fusion-instances-api/)
+- [Google Cloud Data Fusion Instances Locations API](https://apis.io/collections/google-cloud-data-fusion/open-google-cloud-data-fusion-locations-api/)
+- [Google Cloud Data Fusion Instances Operations API](https://apis.io/collections/google-cloud-data-fusion/open-google-cloud-data-fusion-operations-api/)
+- [Google Cloud Data Fusion Instances API](https://apis.io/collections/google-cloud-data-fusion/postman-google-cloud-data-fusion-instances-api/)
+- [Google Cloud Data Fusion Instances Locations API](https://apis.io/collections/google-cloud-data-fusion/postman-google-cloud-data-fusion-locations-api/)
+- [Google Cloud Data Fusion Instances Operations API](https://apis.io/collections/google-cloud-data-fusion/postman-google-cloud-data-fusion-operations-api/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [Google Cloud Data Fusion — jsonschema rules](https://apis.io/rules/google-cloud-data-fusion/google-cloud-data-fusion-jsonschema-spectral-rules/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Google Cloud Data Fusion Authentication](https://apis.io/security/google-cloud-data-fusion/google-cloud-data-fusion-authentication/)
+- [Google Cloud Data Fusion Domain Security](https://apis.io/security/google-cloud-data-fusion/google-cloud-data-fusion-domain-security/)
+- [Google Cloud Data Fusion Vulnerability Disclosure](https://apis.io/security/google-cloud-data-fusion/google-cloud-data-fusion-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Google Cloud Data Fusion Scopes](https://apis.io/scopes/google-cloud-data-fusion/google-cloud-data-fusion-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Google Cloud Data Fusion Plans Pricing](https://apis.io/plans/google-cloud-data-fusion/google-cloud-data-fusion-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Google Cloud Data Fusion Rate Limits](https://apis.io/rate-limits/google-cloud-data-fusion/google-cloud-data-fusion-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Google Cloud Data Fusion Finops](https://apis.io/finops/google-cloud-data-fusion/google-cloud-data-fusion-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.google.com/)
 - [Documentation](https://cloud.google.com/data-fusion/docs)
-- [Authentication](https://cloud.google.com/data-fusion/docs/concepts/iam)
+- [Getting started](https://cloud.google.com/data-fusion/docs/quickstarts)
 - [Pricing](https://cloud.google.com/data-fusion/pricing)
-- [Terms of Service](https://cloud.google.com/terms)
-- [Privacy Policy](https://policies.google.com/privacy)
-- [Status Page](https://status.cloud.google.com/)
 - [Support](https://cloud.google.com/data-fusion/docs/support)
-- [JSON-LD](json-ld/google-cloud-data-fusion-context.jsonld) — [JSON-LD](https://www.w3.org/TR/json-ld11/)
-- [Integrations](https://cloud.google.com/marketplace)
+- [Terms of service](https://cloud.google.com/terms)
+- [Privacy policy](https://policies.google.com/privacy)
+- [GitHub](https://github.com/googleapis)
+- [Status](https://status.cloud.google.com/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 42.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 58.1 |
+| Contract governance | 9.8 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 25.0 |
+| Access clarity | 39.5 |
+
+**Agent readiness 24.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 40.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/google-cloud-data-fusion/](https://apis.io/providers/google-cloud-data-fusion/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Google Cloud Data Fusion: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/google-cloud-data-fusion/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
